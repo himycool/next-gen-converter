@@ -127,10 +127,15 @@ function subMenuPage() {
     }
 }
 
-function ngc_add_editor_styles()
-{
+function ngc_add_editor_styles(){
     wp_enqueue_style('ngc-styles', plugins_url( 'css/ngc-main.css', __FILE__ ), array());
-    wp_enqueue_script('ngc-vue-js', 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js', array(), null, false);
-    wp_enqueue_script('ngc-js', plugins_url( 'js/ngc-main.js', __FILE__ ), array(), null, true);
 }
 add_action('admin_init', 'ngc_add_editor_styles');
+
+function enqueue_scripts_front_end(){
+    wp_deregister_script('jquery');
+	wp_enqueue_script('jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js', array(), null, true);
+    wp_enqueue_script('ngc-vue', 'https://cdnjs.cloudflare.com/ajax/libs/vue/2.5.3/vue.min.js', array(), null, false);
+    wp_enqueue_script('ngc-custom', plugins_url( 'js/ngc-main.js', __FILE__ ), array('jquery'), null, true);
+}
+add_action('admin_enqueue_scripts','enqueue_scripts_front_end');

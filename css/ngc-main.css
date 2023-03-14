@@ -131,3 +131,10 @@ input[type=range]:focus::-ms-fill-lower {
 input[type=range]:focus::-ms-fill-upper {
 	background: #ccc;
 }
+
+/* custom codes added by himas */
+.img-count{
+	display: inline-block;
+	font-size: 14px;
+	color: chocolate;
+}
