@@ -1,0 +1,133 @@
+body{
+	padding:0;
+	margin:0;
+}
+.value{
+	position:absolute;
+	left:125%;
+	top:20%;
+	transform:translate(-50%,-10%);
+	font-size:calc(5vmax + 44px);
+	color:darkred;
+    font-size: 14px;
+}
+#app{
+	position:relative;
+	display:flex;
+	align-items:center;
+	justify-content:center;
+	height:5vh;
+	width:10vw;
+	background-color: rgba(0,43,123,.1);
+}
+input[type=range] {
+	/*removes default webkit styles*/
+	-webkit-appearance: none;
+	/*fix for FF unable to apply focus style bug */
+	/*required for proper track sizing in FF*/
+	width: 90%;
+	height: 9px;
+	padding: 0;
+	border-radius: 5.5px;
+	border: solid 1px #dfe4ec;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+	width: 100%;
+	height: 9px;
+	border-radius: 5.5px;
+	border: 0;
+}
+
+input[type=range]::-webkit-slider-thumb {
+	-webkit-appearance: none;
+	height: 20px;
+	width: 20px;
+	border: 4px solid #FFF;
+	border-radius: 50%;
+	background: darkred;
+	margin-top: -6px;
+	cursor: pointer;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 44, .5);
+}
+
+input[type=range]:focus {
+	outline: none;
+}
+
+input[type=range]:focus::-webkit-slider-runnable-track {
+	//background-color: #fa4359;
+	cursor: pointer;
+}
+
+input[type=range]::-moz-range-track {
+	width: 100%;
+	height: 9px;
+	border-radius: 5.5px;
+	//background-color: #fa4359;
+	background-color: transparent;
+	border: none;
+	cursor: pointer;
+}
+
+input[type=range]::-moz-range-thumb {
+	height: 12px;
+	width: 12px;
+	border: 4px solid #FFF;
+	border-radius: 50%;
+	background: darkred;
+	cursor: pointer;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 44, .5);
+}
+
+
+/*hide the outline behind the border*/
+
+input[type=range]:-moz-focusring {
+	outline: none;
+}
+
+input[type=range]::-moz-focus-outer {
+	border: 0;
+}
+
+input[type=range]::-ms-track {
+	width: 100%;
+	height: 5px;
+	/*remove bg colour from the track, we'll use ms-fill-lower and ms-fill-upper instead */
+	background: transparent;
+	/*leave room for the larger thumb to overflow with a transparent border */
+	border-color: transparent;
+	border-width: 6px 0;
+	/*remove default tick marks*/
+	color: transparent;
+	cursor: pointer;
+}
+
+input[type=range]::-ms-fill-lower {
+	background: #777;
+	border-radius: 10px;
+}
+
+input[type=range]::-ms-fill-upper {
+	background: #ddd;
+	border-radius: 10px;
+}
+
+input[type=range]::-ms-thumb {
+	height: 20px;
+	width: 20px;
+	border: 4px solid #FFF;
+	border-radius: 50%;
+	background: darkred;
+	cursor: pointer;
+	box-shadow: 0 2px 4px 0 rgba(0, 0, 44, .5);
+}
+
+input[type=range]:focus::-ms-fill-lower {
+	background: #888;
+}
+
+input[type=range]:focus::-ms-fill-upper {
+	background: #ccc;
+}
