@@ -23,8 +23,11 @@ function ngc_plugin_setting_output_format() {
 }
 
 function ngc_plugin_setting_quality() {
+    $defaultVal = 90;
     $options = get_option( 'ngc_general_options' );
-   // echo $options['quality'];
+    if($options['quality']){
+        $defaultVal = $options['quality'];
+    }
 ?>
 
     <div id="app">
@@ -36,9 +39,10 @@ function ngc_plugin_setting_quality() {
         new Vue(({
         el: '#app',
         data: {
-                rangeValue: <?php echo $options['quality']; ?>
+                rangeValue: <?php echo $defaultVal; ?>,
             }
         }))
     </script>
 <?php
 }
+

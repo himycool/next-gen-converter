@@ -107,6 +107,7 @@ function register_my_custom_menu_page() {
 }
 add_action( 'admin_menu', 'register_my_custom_menu_page' );
 
+//general setting
 if ( is_file( plugin_dir_path( __FILE__ ) . 'functions/ngc-general-function.php' ) ) {
     include_once plugin_dir_path( __FILE__ ) . 'functions/ngc-general-function.php';
 }
@@ -117,6 +118,7 @@ function menuPage() {
     }
 }
 
+//bulk optimization
 if ( is_file( plugin_dir_path( __FILE__ ) . 'functions/ngc-bulk-function.php' ) ) {
     include_once plugin_dir_path( __FILE__ ) . 'functions/ngc-bulk-function.php';
 }

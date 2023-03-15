@@ -4,7 +4,7 @@
  *
  * This file is used to markup the admin-facing aspects of the plugin.
  *
- * @link       ttps://github.com/himycool/next-gen-converter
+ * @link       https://github.com/himycool/next-gen-converter
  * @since      0.1
  *
  * @package    NextGenConverter
