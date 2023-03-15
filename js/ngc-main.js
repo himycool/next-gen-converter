@@ -38,18 +38,21 @@ function getImgCnt() {
 
 //convert images
 function convertImage() {
-    let mimeVal = $('#ngc_bulk_setting_format option:selected').val();
-    let qualityVal = $('#ngc_bulk_per_run option:selected').val();
+    let mimeValFrom = $('#ngc_bulk_setting_format option:selected').val();
+    let perRun = $('#ngc_bulk_per_run option:selected').val();
+    let rmvImg = $("#rmv-exs").attr("checked") ? 1 : 0;
+
     $.ajax({
         type: 'POST',
         url: '/wp-admin/admin-ajax.php',
         data: {
             action: 'convert_images',
-            mimeType: mimeVal,
-            qualityVal: qualityVal
+            mimeValFrom: mimeValFrom,
+            perRun: perRun,
+            rmvImg: rmvImg
         },
         success: (response) => {
-           // console.log(response.data);
+            console.log(response.data);
             // $('.img-count').show();
             // if(response.data > 0){
             //     $('.img-count').text(response.data + " Image's Available");

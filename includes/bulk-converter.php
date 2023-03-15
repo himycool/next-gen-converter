@@ -15,6 +15,7 @@
 <div class="wrap">
     <div id="icon-themes" class="icon32"></div>  
     <h2>Next Gen Bulk Converter</h2>
+    <span class="display-msg"></span>
     <p>Here you can set bulk setting</p>
     <table class="form-table" role="presentation">
         <tbody>
@@ -43,10 +44,16 @@
                     </select>
                 </td>
             </tr>
+            <tr>
+                <th scope="row">Remove Existing Image</th>
+                <td>
+                    <input type="checkbox" name="rmv-exs" id="rmv-exs" value="" />
+                </td>
+            </tr>
         </tbody>
     </table>
     <p class=""submit>
         <input type="button" name="bulk-optimize" id="bulk-optimize" class="button button-primary" value="Start Bulk Optimization">
     </p>
-    
+
 </div>

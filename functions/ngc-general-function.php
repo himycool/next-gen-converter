@@ -45,4 +45,3 @@ function ngc_plugin_setting_quality() {
     </script>
 <?php
 }
-
