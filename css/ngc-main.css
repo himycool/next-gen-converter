@@ -138,3 +138,8 @@ input[type=range]:focus::-ms-fill-upper {
 	font-size: 14px;
 	color: chocolate;
 }
+
+.display-msg{
+	font-size: 14px;
+	color: green;
+}

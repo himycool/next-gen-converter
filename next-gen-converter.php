@@ -13,6 +13,9 @@ if (!defined('ABSPATH')) {
 	exit;
 }
 
+ini_set('max_execution_time', 0);
+ini_set('memory_limit', '1G');
+
 /********************************************************************************************
  * Activation & PHP version checks.
  ********************************************************************************************/
@@ -106,6 +109,29 @@ function register_my_custom_menu_page() {
 	);
 }
 add_action( 'admin_menu', 'register_my_custom_menu_page' );
+
+$logFilePath = plugin_dir_path( __FILE__ ).'logs/info.log';
+/**
+ * Write logs
+ * @param $message
+ * @param string $type
+ */
+function writeLog($message, $type = 'Success')
+{
+	global $logFilePath;
+	$message = date('Y-d-m H:i:s : ') . strtoupper($type) . ' : ' . $message;
+	//Update log file
+	file_put_contents($logFilePath, $message . PHP_EOL, FILE_APPEND | LOCK_EX);
+}
+
+/**
+ * clear the log file content
+ */
+function clearLogFile()
+{
+	global $logFilePath;
+	file_put_contents($logFilePath, '');
+}
 
 //general setting
 if ( is_file( plugin_dir_path( __FILE__ ) . 'functions/ngc-general-function.php' ) ) {

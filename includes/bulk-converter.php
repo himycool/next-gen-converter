@@ -25,9 +25,7 @@
                     <select id='ngc_bulk_setting_format' name='ngc_bulk_setting_format'>
                         <option value='image/png'>PNG</option>
                         <option value='image/jpeg'>JPEG</option>
-                        <option value='image/svg+xml'>SVG</option>
                         <option value='image/gif'>GIF</option>
-                        <option value='image/apng'>APNG</option>
                     </select>
                     <span class="img-count"></span>
                 </td>
@@ -44,12 +42,12 @@
                     </select>
                 </td>
             </tr>
-            <tr>
+            <!-- <tr>
                 <th scope="row">Remove Existing Image</th>
                 <td>
                     <input type="checkbox" name="rmv-exs" id="rmv-exs" value="" />
                 </td>
-            </tr>
+            </tr> -->
         </tbody>
     </table>
     <p class=""submit>
