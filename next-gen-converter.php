@@ -86,7 +86,8 @@ function register_my_custom_menu_page() {
 		'manage_options',
 		'next-gen-converter',
 		'menuPage',
-		plugins_url( 'next-gen-converter/images/logo.png' ),
+		//plugins_url( 'next-gen-converter/images/logo.png' ),
+		'dashicons-download',
 		100
 	);
 

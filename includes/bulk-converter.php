@@ -20,9 +20,25 @@
     <table class="form-table" role="presentation">
         <tbody>
             <tr>
+                <th scope="row">Convert Image From</th>
+                <td>
+                    <select id='ngc_bulk_from' name='ngc_bulk_from'>
+                        <option value='upload'>Upload</option>
+                        <option value='media'>Media</option>
+                    </select>
+                </td>
+            </tr>
+            <tr class="bulk-files">
+                <th scope="row">Upload Images</th>
+                <td>
+                <input type="file" id="bulk-files" name="bulk-files[]" multiple 
+                accept="image/png, image/jpeg, image/gif">
+                </td>
+            </tr>
+            <tr class="media-files">
                 <th scope="row">Bulk Formats From</th>
                 <td>
-                    <select id='ngc_bulk_setting_format' name='ngc_bulk_setting_format'>
+                    <select id='ngc_bulk_setting_format'>
                         <option value='image/png'>PNG</option>
                         <option value='image/jpeg'>JPEG</option>
                         <option value='image/gif'>GIF</option>
@@ -50,8 +66,9 @@
             </tr> -->
         </tbody>
     </table>
+    <div class="my-box"></div>
     <p class=""submit>
-        <input type="button" name="bulk-optimize" id="bulk-optimize" class="button button-primary" value="Start Bulk Optimization">
+        <input type="button" name="bulk-optimize" id="bulk-optimize"
+            class="button button-primary" value="Start Bulk Optimization">
     </p>
-
 </div>
